@@ -1,3 +1,5 @@
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header)
+
 ## About Me
 #### School of Computer Science and Engineering, Artificial Intelligence Major, Pusan National University (PNU)
 
