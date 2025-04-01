@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header)
+![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=BONEVOAC&fontAlign=80&fontAlignY=40&color=gradient)
 
 ## About Me
 #### School of Computer Science and Engineering, Artificial Intelligence Major, Pusan National University (PNU)
