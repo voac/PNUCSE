@@ -14,10 +14,7 @@
 
 ## solved.ac
 [![bonevoac's solved.ac profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=bonevoac)](https://solved.ac/profile/bonevoac)
-</br>
 [![bonevoac's daily solved.ac stats](http://mazandi.herokuapp.com/api?handle=bonevoac&theme=warm)](https://solved.ac/profile/bonevoac)
-</br>
 
 ## Github stacks
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=voac)](https://github.com/anuraghazra/github-readme-stats)
-</br>
