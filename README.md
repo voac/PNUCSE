@@ -1,11 +1,4 @@
 <div>
-  
-  <!--Header-->
-  ![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Good%20to%20see%20you%20%F0%9F%A4%97)
-  
-</div>
-
-<div>
   <!--Body-->
   
   ## 👀 About Me
@@ -28,5 +21,7 @@
   [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=voac)](https://github.com/anuraghazra/github-readme-stats)
   <br/>
   [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=voac)](https://github.com/anuraghazra/github-readme-stats)
+  <br/>
+  [![Solved.ac 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=bonevoac)](https://solved.ac/bonevoac)
   
 </div>
