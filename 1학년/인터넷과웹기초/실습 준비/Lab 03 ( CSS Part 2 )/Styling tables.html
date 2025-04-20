@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Styling Tables</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td, th {
+                height: 20px;
+                width: 100px;
+                padding: 10px;
+                text-align: left;
+            }
+            thead th {
+                height: 40px;
+                width: 100px;
+            }
+            thead {
+                background: darkgray;
+                color: yellow;
+            }
+            td, tfoot th {
+                border-bottom: 1px solid gray;
+            }
+            thead, tfoot {
+                background: darkgray;
+                color: yellow;
+            }
+            tbody tr:nth-child(even) {
+                background: aliceblue;
+            }
+            tbody tr:hover {
+                background: lightsalmon;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Satisfaction score</h3>
+
+        <hr>
+
+        <table>
+            <thead>
+                <tr><th>Name</th> <th>HTML</th> <th>CSS</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>John</td> <td>80</td> <td>70</td></tr>
+                <tr><td>Jane</td> <td>95</td> <td>99</td></tr>
+                <tr><td>Daniel</td> <td>80</td> <td>70</td></tr>
+                <tr><td>Alice</td> <td>95</td> <td>99</td></tr>
+                <tr><td>Kevin</td> <td>80</td> <td>70</td></tr>
+                <tr><td>Jack</td> <td>95</td> <td>99</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><th>Total</th> <th>175</th> <th>169</th></tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+Blackjack (formerly Black Jack and Vingt-Un) is a casino banking game. It is the most widely played casino banking game in the world. It uses decks of 52 cards and descends from a global family of casino banking games known as Twenty-One. This family of card games also includes the European games Vingt-et-Un and Pontoon, and the Russian game Ochko. Blackjack players do not compete against each other. The game is a comparing card game where each player competes against the dealer.
+
+The object of the game is to win money by creating card totals higher than those of the dealer's hand but not exceeding 21, or by stopping at a total in the hope that the dealer will bust. On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a card), "double" (double their wager, take a single card, and finish), "split" (if the two cards have the same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the game).
+
+Dealer's hands: move mouse cursor over each card to see the card face
+
+Player's hands: move mouse cursor over each card to see the card face

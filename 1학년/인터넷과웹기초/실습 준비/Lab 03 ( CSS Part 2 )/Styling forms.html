@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Styling Forms</title>
+        <style>
+            input[type=text].color {
+                color: red;
+            }
+            input[type=text].border {
+                border: 2px solid skyblue;
+                border-radius: 5px;
+            }
+            input[type=text].hover:hover {
+                background: lightblue;
+            }
+            input[type=text].focus:focus {
+                font-size: 120%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <label>
+            Name : <input type="text" placeholder="Enter your name" class="color">
+        </label> Change color
+        <br><br>
+        <label>
+            Name : <input type="text" placeholder="Enter your name" class="border">
+        </label> Border
+        <br><br>
+        <label>
+            Name : <input type="text" placeholder="Enter your name" class="hover">
+        </label> Hover effect
+        <br><br>
+        <label>
+            Name : <input type="text" placeholder="Enter your name" class="focus">
+        </label> Focus effect
+    </body>
+</html>

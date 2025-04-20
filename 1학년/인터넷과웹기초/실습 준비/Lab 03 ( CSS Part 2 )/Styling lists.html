@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Styling Lists</title>
+        <style>
+            ul.color {
+                background: goldenrod;
+                padding: 10px 10px 10px 50px;
+                /* order : top, right, bottom, left*/
+            }
+
+            ul.color li { /* If li is ul's descendant */
+                background: greenyellow;
+                margin-bottom: 5px;
+            }
+            #menubar {
+                background: olive;
+            }
+            #menubar ul {
+                margin: 0;
+                padding: 0;
+                width: 567px;
+            }
+            #menubar ul li {
+                display: inline-block;
+                list-style-type: none;
+                padding: 0px 15px;
+            }
+            #menubar ul li a {
+                text-decoration: none;
+                color: white;
+            }
+            #menubar ul li a:hover {
+                color: violet;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h3> Changing background colors : background property </h3>
+        <ul class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+        <br>
+
+        <hr>
+
+        <h3> Changing markers' positions : list-style-position (inside | outside) </h3>
+
+        <ul style="list-style-position: inside;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+        <br>
+
+        <hr>
+
+        <h3>Changing markers' types : list-style-type</h3>
+
+        <ul style="list-style-type: square;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: circle;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: disc;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: none;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: decimal;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: lower-alpha;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: upper-alpha;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+
+        <ul style="list-style-type: lower-roman;"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+        <br>
+
+        <hr>
+
+        <h3>Using image markers: list-style-image</h3>
+        
+        <ul style="list-style-image: url('https://www.google.com');"  class="color">
+            <li>Espresso</li>
+            <li>Latte</li>
+            <li>Macchiato</li>
+            <li>Cappuccino</li>
+        </ul>
+        <br>
+
+        <hr>
+
+        <h3>Using a list to create web page menu</h3>
+
+        <nav id="menubar">
+            <ul>
+                <li><a href="any_url">Home</a></li>
+                <li><a href="any_url">Espresso</a></li>
+                <li><a href="any_url">Latte</a></li>
+                <li><a href="any_url">Macchiato</a></li>
+                <li><a href="any_url">Cappuccino</a></li>
+                <li><a href="any_url">FAQ</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

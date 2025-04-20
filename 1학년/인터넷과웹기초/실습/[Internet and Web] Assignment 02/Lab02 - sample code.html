@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 02 - CSS (Part 1)</title>
+<!-- ---------------------------------------------- -->
+<style>
+body {
+	background-color: rgb(218, 218, 218);
+}
+h1 {
+	text-align : center;
+	color : yellow;
+	text-shadow : 2px 2px 3px blue;
+}
+div {
+	width : 100px;
+	height : 140px;
+	background-image : url("media/cards/back.png");
+	background-size : 100px 140px;
+}
+div#img.club7:hover {
+	background-image : url("media/cards/Playing_card_club_7.svg");
+}
+div#img.spade3:hover {
+	background-image : url("media/cards/Playing_card_spade_3.svg");
+}
+div#img.spade1:hover {
+	background-image : url("media/cards/Playing_card_spade_A.svg");
+}
+div#img.dia10:hover {
+	background-image : url("media/cards/Playing_card_diamond_10.svg");
+}
+img:hover {
+	box-shadow : 0px 0px 10px blue;
+}
+hr {
+    border: 3px solid yellow;
+}
+h2 {
+	color: blue;
+}
+p {
+	text-indent: 1em
+}
+span {
+	color: red;
+	font-weight: bold;
+}
+.hover1:hover {
+	background-color: yellow;
+}
+.hover2:hover {
+	background-color: greenyellow;
+}
+</style>
+<!-- ---------------------------------------------- -->
+</head>
+<body>
+<!-- ---------------------------------------------- -->
+<h1>Playing Blackjack</h1>
+<!-- ---------------------------------------------- -->
+<hr>
+<!-- ---------------------------------------------- -->
+<h2>1. Game and rule</h2>
+<p class="hover1"><span>Blackjack</span> (formerly Black Jack and Vingt-Un) is a casino banking game. It is the most widely played casino banking game in the world. It uses decks of 52 cards and descends from a global family of casino banking games known as Twenty-One. This family of card games also includes the European games Vingt-et-Un and Pontoon, and the Russian game Ochko. Blackjack players do not compete against each other. The game is a comparing card game where each player competes against the dealer.</p>
+<p class="hover2">The object of the game is to win money by creating card totals higher than those of the dealer's hand but <span>not exceeding 21</span>, or by stopping at a total in the hope that the dealer will bust. On their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a card), "double" (double their wager, take a single card, and finish), "split" (if the two cards have the same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the game).</p>
+<!-- ---------------------------------------------- -->
+<hr>
+<!-- ---------------------------------------------- -->
+<h2>2. Sample game</h2>
+<center>
+	<table border="0">
+		<tbody align="center">
+			<tr><td><b></b></td><td><b>1st hand</b></td><td><b>2nd hand</b></td></tr>
+			<tr><td style="color: red;"><b>Dealer</b></td><td><div id="img" class="club7"></div></td><td><div id="img" class="spade3"></div></td><td style="text-align: left;">Dealer's hands: <br>move mouse cursor over each card<br>to see the card face</td></tr>
+			<tr><td style="color: blue;"><b>Player</b></td><td><div id="img" class="dia10"></div></td><td><div id="img" class="spade1"></div></td><td style="text-align: left;">Player's hands: <br>move mouse cursor over each card<br>to see the card face</td></tr>
+		</tbody>
+	</table>
+</center>
+<!-- ---------------------------------------------- -->
+<hr>
+<!-- ---------------------------------------------- -->
+<h2>3. Online resources</h2>
+<center>
+	<table>
+		<tr>
+		<td>
+			<iframe src="leftframe.html" name="left" width="200" height="500" frameBorder="0"></iframe>
+		</td>
+		<td>
+			<iframe src="rightframe.html" name="right" width="700" height="500" frameBorder="0"></iframe>
+		</td>
+		</tr>
+	</table>
+</center>
+<!-- ---------------------------------------------- -->
+<hr>
+<!-- ---------------------------------------------- -->
+<center>
+	<table border="0"> 
+		<tbody>
+			<!-- Please use the relative filepath, not absolute path -->
+			<tr><td><img src="./media/PNU.png" width="60" height="60" alt="(selfie)"></td>
+				<td>장현빈 <br>
+					정보컴퓨터공학부 인공지능전공<br>
+					Pusan National University</td>
+			</tr>
+		</tbody>
+	</table> 
+</center>
+<!-- ---------------------------------------------- -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Combined selectors (advanced)</title>
+        <style>
+            /* Universal Selector */
+            /** {
+                color: red;
+            } */
+            /* Property Selector */
+            input[type="text"] {
+                color: red;
+            }
+            /* Pseudo-class Selector */
+            li:hover {
+                background: yellowgreen;
+            }
+            h3:first-letter {
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Web Programming</h3>
+        <hr>
+        <div>Course <strong>topics</strong></div>
+        <ul>
+            <li>HTML5</li>
+            <li><strong>CSS</strong></li>
+            <li>JavaScript</li>
+        </ul>
+        <div>Don't be late!</div>
+    </body>
+</html>

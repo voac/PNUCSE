@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            h1 {
+                text-align : center;
+                color : orange;
+                text-shadow : 2px 2px 3px blue;
+            }
+            ul#myMenu > li { 
+                display: inline-block; 
+                list-style-type: none;
+                text-decoration: none;
+                color: white;
+                width: 200px; 
+                position: relative; 
+                text-align: center;
+            }
+            ul#myMenu > li ul { 
+                display:none;
+                position:absolute;
+            }
+            ul#myMenu > li:hover ul { 
+                display:block;
+            }
+            ul#myMenu, ul#submenu {
+                background: gray;
+            }
+            ul#submenu {
+                padding-left: 0;
+                margin: 0;
+                padding-right: 2em;
+                list-style-type: none;
+                text-decoration: none;
+                color: white;
+            }
+            ul#myMenu li a {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
+        <title>Dropdown menu</title>
+    </head>
+
+    <body>
+        <h1>Welcome to my home page!</h1>
+        <hr>
+        <div id="container">
+            <ul id="myMenu">
+                <li><a href="./main.html" target="site">Home (Click)</a></li>
+                <li>
+                    Info (hover, no-click)
+                    <ul id="submenu">
+                        <li><a href="./computer.html" target="site">Computer (Click)</a></li>
+                        <li><a href="./alan.html" target="site">Alan Turing (Click)</a></li>
+                    </ul>   
+                </li>
+                <li><a href="./contacts.html" target="site">Contacts (Click)</a></li>
+            </ul>
+        </div>
+        <div>
+            <img src="./media/beach.jpg" style="width: 100%; height: 400px">
+        </div>
+        <div>
+            <iframe src="./main.html" name="site" width=100% height="600px" frameBorder="0"></iframe>
+        </div>
+        <hr>
+        <center>
+            <table border="0"> 
+                <tbody>
+                    <!-- Please use the relative filepath, not absolute path -->
+                    <tr><td><img src="./media/PNU.png" width="60" height="60"></td>
+                        <td>장현빈 <br>
+                            정보컴퓨터공학부 인공지능전공<br>
+                            Pusan National University</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </center>
+    </body>
+</html>
