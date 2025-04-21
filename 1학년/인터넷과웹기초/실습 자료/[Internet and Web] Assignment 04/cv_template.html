@@ -1,0 +1,211 @@
+<!-- 
+    The following content is downloaded from
+    https://www.w3schools.com/w3css/tryw3css_templates_cv.htm
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+<link rel="stylesheet" href="w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.firstletter::first-letter {
+  color: red;
+  font-size: larger;
+}
+.hidden {
+  display: none;
+}
+ul.hidden_ul li:hover {
+  background-color: cyan;
+}
+ul.hidden_ul li:hover span{
+  display: inline;
+}
+::selection {
+  background-color: yellow;
+  color: hotpink;
+}
+.image {
+  background-image: url('./avatar_hat.jpg');
+  width: 80px;
+  height: 80px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.image:hover {
+  background-image: url('./face.png');
+}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="avatar_hat.jpg" style="float:center; width:100%;" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Daniel Kim</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Programmer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Busan, South Korea</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ID@DOMAIN.ac.kr</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>051-510-9999</p>
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>Programming (C, C++, Java, Python)</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p>Numerical analysis tools (Matlab)</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+          <p>Network simulators (ns-3, mininet)</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+          <p>Linux</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p>Korean</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%">
+              <div class="w3-center w3-text-white">100%</div>
+            </div>
+          </div>
+          <p>English</p>
+          <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:70%">
+              <div class="w3-center w3-text-white">70%</div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Future Career Plan</h2>
+        <div class="w3-container">
+          <p class="firstletter">As an endless learner, I like to learn and share with everyone. I am particularly interested in network engineer positions, but I am open to full-stack developer positions as well.</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity" style="text-decoration: underline;"><b><a href="https://www.pusan.ac.kr/kor/Main.do">Pusan National University</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Majoring in Information and Comp. Engr. at Computer Sci. and Engr. department.</p>
+          <p>Courses I enjoyed:</p>
+          <ul class="hidden_ul">
+            <li>Computer Networks (S'21)<span class="hidden"> : socket programming</span></li>
+            <li>Operating System (F'21)<span class="hidden"> : dynamic memory mngt. programming</span></li>
+            <li>Data Structure (S'22)<span class="hidden"> : linked list</span></li>
+          </ul>
+          <p>As a research intern at <a href="https://www.daum.net/" style="text-decoration: underline;">NET research lab</a>. I've been participated in the following research:</p>
+          <ul class="hidden_ul">
+            <li>Computer simulator development for vehicular networks<span class="hidden"> : ns-3 and sumo simulators</span></li>
+            <li>Long-range communication device development<span class="hidden"> : LoRa(WAN) over RPi</span></li>
+            <li>Hybrid cloud computing testbed setup<span class="hidden"> : Ubuntu 22 Server with Docker</span></li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b><a href="https://www.daum.net/">Oh-hora High School</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
+          <p>Participated in Science Club (2013-2014), and then I joined Computer Programming Club as a leader (2014-2015).</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work/Project Experience</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Front End Developer @ <a href="https://www.daum.net/" style="text-decoration: underline;">w3schools.com</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <table border="0"> 
+            <tbody>
+                <tr><td><div class="image"></div></td>
+                    <td>As a front-end developer, I developed a web UI for the Digital Transformation Project for manufacturing businesses in Busan, South Korea. In particular, as a leader of the UI/UX team, I developed ABC components to enhance usability with five(5) junior engineers.</td>
+                </tr>
+            </tbody>
+          </table>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Part-Time Web Developer @ <a href="https://www.daum.net/" style="text-decoration: underline;">something.com</a></b></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+          <table border="0"> 
+            <tbody>
+                <tr><td><div class="image"></div></td>
+                    <td>I participated in ABC web site usability enhancement project for 12 hours per week. In particular, I proposed to re-organize the layout of ZZZ web page, and as a result, DAU and MAU increased by 40% and 25%, respectively. The project was awarded the best achievement award on 2015.</td>
+                </tr>
+            </tbody>
+          </table>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Volunteer Staff @ <a href="https://www.daum.net/" style="text-decoration: underline;">designsomething.com</a></b></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <table border="0"> 
+            <tbody>
+                <tr><td><div class="image"></div></td>
+                    <td>As a Volunteer Staff, I operated and controlled the audio/video system of the main stage and auditorium for CCCA 2023 Exhibition for the first two years. On the last year, 2012, I was promoted to manager, and coordinated the system operation and maintenance.</td>
+                </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <a href='https://www.facebook.com/'><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <a href='https://www.instagram.com/'><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <a href='https://kr.linkedin.com/'><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> (credit: https://www.w3schools.com/w3css/tryw3css_templates_cv.html)</p>
+</footer>
+
+</body>
+</html>
