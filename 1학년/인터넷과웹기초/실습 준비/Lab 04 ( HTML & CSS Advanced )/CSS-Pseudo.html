@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS-Pseudo elements</title>
+        <style>
+            p.intro::first-letter {
+                color: red;
+                font-size: xx-large;
+            }
+            h1.before::before {
+                content: "";
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-image: url('./PNU.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            h1.after::after {
+                content: "";
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-image: url('./PNU.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            ::selection {
+                background: yellow;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p class="intro">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+        <br>
+        <p class="intro">This is an introduction.</p>
+        <p>This is a paragraph with some text. A bit more text even.</p>
+        <br>
+        <h1 class="before">This is a heading</h1>
+        <p>The ::before pseudo-element inserts content before the content of an element.</p>
+        <br>
+        <h1 class="after">This is a heading</h1>
+        <p>The ::before pseudo-element inserts content after the content of an element.</p>
+        <br>
+        <h1>Select some text on this page:</h1>
+        <p>This is a paragraph.</p>
+        <div>This is some text in a div element.</div>
+    </body>
+</html>

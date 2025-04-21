@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS resizing</title>
+        <style>
+            div.horizontal {
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: horizontal;
+                overflow: auto;
+            }
+            div.vertical {
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: vertical;
+                overflow: auto;
+            }
+            div.both {
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                resize: both;
+                overflow: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>The resize Property</h1>
+        <div class="horizontal">
+            <p>Let the user resize only the width of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div>
+        <br>
+        <div class="vertical">
+            <p>Let the user resize only the geight of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div>
+        <br>
+        <div class="both">
+            <p>Let the user resize both the width and the height of this div element.</p>
+            <p>To resize: Click and drag the bottom right corner of this div element.</p>
+        </div>
+    </body>
+</html>

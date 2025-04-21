@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selectors and combinators</title>
+        <style>
+            div {
+                color: red;
+            }
+            /* element1 > element2 : 부모가 element1인 element2를 모두 선택 */
+            div > p {
+                font-family: 'Courier New', Courier, monospace;
+            }
+            /* element1 element2 : element1의 후손(모든 하위 부분) 중 element2를 모두 선택 */
+            div p {
+                background-color: aqua;
+            }
+            /* element1 + element2 : element1과 같은 부모를 가지면서 element1 바로 뒤에 오는 element2를 모두 선택 */
+            div + p {
+                border-style: dashed;
+            }
+            /* element1 ~ element2 : element1과 같은 부모를 가지는 element2를 모두 선택 */
+            div ~ p {
+                font-size: 200%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Computer (from Wiki)</h3>
+        <hr>
+        <div>
+            <p>
+                <p>
+                    1) Do you want to ..?
+                </p>
+
+                <p>
+                    2) A computer is a machine that ...
+                </p>
+            </p>
+
+            <p>
+                3) A computer system ...
+            </p>
+        </div>
+
+        <p>
+            4) A broad range of ...
+        </p>
+
+        <p>
+            5) Computers power the Internet ...
+        </p>
+    </body>
+</html>
