@@ -8,9 +8,9 @@ def f_define():
         temp_e_poly = input().split()
         temp_e_poly_n = int(( len(temp_e_poly) - 1 ) / 2)
 
-        temp_poly = {}
         
         for i in range(temp_e_poly_n):
+            temp_poly = {}
             start_index = 2 * i
 
             part = temp_e_poly[start_index:start_index + 2]
@@ -30,9 +30,9 @@ def g_define():
         temp_e_poly = input().split()
         temp_e_poly_n = int(( len(temp_e_poly) - 1 ) / 2)
 
-        temp_poly = {}
         
         for i in range(temp_e_poly_n):
+            temp_poly = {}
             start_index = 2 * i
 
             part = temp_e_poly[start_index:start_index + 2]
@@ -42,8 +42,10 @@ def g_define():
 
     return g
 
+def multiply(func1, func2):
+    for e1, p1 in func1.items():
+        for e2, p2 in func2.items():
+            # CONTINUE
+
 f = f_define()
 g = g_define()
-
-print(f)
-print(g)
