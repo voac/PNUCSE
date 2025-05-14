@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+        table {
+            width: 600px;
+        }
+        td {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        td:hover {
+            background-color: yellow;
+        }
+        </style>
+        <script>
+            let ret1 = 0;
+            let ret2 = 0;
+            let hobby;
+            let uname;
+
+            function alertbest() {
+                alert("Do your best!");
+            }
+
+            function calc1() {
+                let result = document.getElementById("result1");
+                ret1 = 10 + 20;
+                result.innerHTML = ret1;
+            }
+
+            function calc2() {
+                let result = document.getElementById("result2");
+                ret2 = 10 * 20;
+                result.innerHTML = ret2;
+            }
+
+            function sum1() {
+                let result = document.getElementById("result3");
+
+                if (ret1 == 0 & ret2 == 0) {
+                    result.innerHTML = "(none)";
+                }
+                else if (ret1 == 0 & ret2 != 0) {
+                    result.innerHTML = "Mult is " + ret2;
+                }
+                else if (ret1 != 0 & ret2 == 0) {
+                    result.innerHTML = "Sum is " + ret1;
+                }
+                else {
+                    result.innerHTML = "Sum is " + ret1 + ", and mult is " + ret2;
+                }
+            }
+
+            function getName() {
+                let result = document.getElementById("result4");
+                uname = prompt("Enter your name", "Jane John Doe");
+
+                if (uname == null) {
+                    // Clicking on Cancel or close button
+                    result.innerHTML = "Cancelled or closed";
+                }
+                else {
+                    // ret = user entered string
+                    // ret = "" means user entered nothing
+                    result.innerHTML = uname;
+                }
+            }
+
+            function getHobby() {
+                let result = document.getElementById("result5");
+                hobby = prompt("Enter your hobby", "Fishing");
+
+                if (hobby == null) {
+                    // Clicking on Cancel or close button
+                    result.innerHTML = "Cancelled or closed";
+                }
+                else {
+                    // ret = user entered string
+                    // ret = "" means user entered nothing
+                    result.innerHTML = hobby;
+                }
+            }
+
+            function sum2() {
+                let result = document.getElementById("result6");
+
+                if (uname == null & hobby == null) {
+                    result.innerHTML = "(none)";
+                }
+                else if (uname == null & hobby != null) {
+                    result.innerHTML = "My hobby is " + hobby;
+                }
+                else if (uname != null & hobby == null) {
+                    result.innerHTML = "My name is " + uname;
+                }
+                else {
+                    result.innerHTML = "My name is " + uname + ", and my hobby is " + hobby;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Tables and JavaScript Dialogs</h1>
+
+        <hr>
+
+        <div>
+            <button onclick="alertbest()">See help!</button>
+        </div>
+
+        <br>
+
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td>10 + 20 = ?<div id="result1">??</div><button onclick="calc1()">Calculate 1</button><div></div></td>
+                    <td>10 x 20 = ?<div id="result2">??</div><button onclick="calc2()">Calculate 1</button><div></div></td>
+                    <td>Calc Summary:<div id="result3">??</div><button onclick="sum1()">Summarize</button><div></div></td>
+                </tr>
+                <tr>
+                    <td>My name is :<div id="result4">??</div><button onclick="getName()">Answer 3</button><div></div></td>
+                    <td>My hobby is :<div id="result5">??</div><button onclick="getHobby()">Answer 4</button><div></div></td>
+                    <td>Intro Summary:<div id="result6">??</div><button onclick="sum2()">Summarize</button><div></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
