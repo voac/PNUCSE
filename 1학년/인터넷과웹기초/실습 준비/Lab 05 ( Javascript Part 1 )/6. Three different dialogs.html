@@ -18,7 +18,7 @@
 
                 if (ret == null) {
                     // Clicking on Cancel or close button
-                    result.innerHTML = "Cancelled or closed"
+                    result.innerHTML = "Cancelled or closed";
                 }
                 else {
                     // ret = user entered string
@@ -30,7 +30,7 @@
             function confirmEX() {
                 let ret = confirm("Transmit, OK?");
 
-                if (ret == True) {
+                if (ret == true) {
                     result.innerHTML = "OK";
                 }
                 else {
@@ -40,6 +40,6 @@
         </script>
 
         <button onclick="promptEX()">Prompt Dialog</button>
-        <button onclick="promptEX()">Prompt Dialog</button>
+        <button onclick="confirmEX()">Confirmation Dialog</button>
     </body>
 </html>
