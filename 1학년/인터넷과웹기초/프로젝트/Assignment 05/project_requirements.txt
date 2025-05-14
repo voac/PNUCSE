@@ -1,0 +1,132 @@
+  Introduction to Internet and Web
+  ------------------------------------
+  Project Report #1: Progress Report
+
+Enter the following for ALL team members!
+
+  Name     Student ID   Department
+  -------- ------------ ------------------
+  오영운                
+  조의민                
+  정상호                
+  장현빈   202555444    정보컴퓨터공학부
+
++-------------+-------------------------------------------------------+
+| Team Number | (you can find your team number in the Project         |
+|             | Announcement pdf file)                                |
+|             |                                                       |
+|             | Team 20                                               |
++-------------+-------------------------------------------------------+
+
+<Note>
+
+-   Write your answer right below each question and submit this document
+      on PLATO.
+
+-   Make only one submission per group.
+
+<Assignments>
+
++----------------------+----------------------+----------------------+
+| [Q 1] Topic and use  |                      |                      |
+| cases [points: 40]   |                      |                      |
+|                      |                      |                      |
+| Answer the following |                      |                      |
+| questions.           |                      |                      |
++======================+======================+======================+
+| Question             | Your answer          |                      |
++----------------------+----------------------+----------------------+
+| What is your web     | 사용자가 특정        |                      |
+| site about?          | 키워드를 입력하면    |                      |
+|                      | 관련 뉴스를          |                      |
+| (e.g., introducing   | 실시간으로 검색하고, |                      |
+| movies, searching    | 자동으로 뉴스를      |                      |
+| for famous           | 요약해주고, 검색     |                      |
+| restaurants, etc…)   | 활동을 기반으로 개인 |                      |
+|                      | 맞춤형 뉴스를        |                      |
+|                      | 추천해주는           |                      |
+|                      | 사이트입니다.        |                      |
++----------------------+----------------------+----------------------+
+| What is a use-case   | 1                    | 뉴스 자동 검색 기능  |
+| your web site        |                      | : 사용자가 검색창에  |
+| offers? (e.g., user  |                      | 특정 키워드를        |
+| can search for the   |                      | 입력하면 관련된 최신 |
+| nearby shops)        |                      | 뉴스를 News API를    |
+|                      |                      | 이용해 실시간으로    |
+| * Note: Your web     |                      | 받아옵니다.          |
+| site must provide    |                      |                      |
+| three use-cases, but |                      |                      |
+| for this question,   |                      |                      |
+| you can just write   |                      |                      |
+| about only one       |                      |                      |
+| use-case.            |                      |                      |
++----------------------+----------------------+----------------------+
+|                      | 2                    | 뉴스 자동 요약 기능  |
+|                      |                      | : 사용자가 뉴스      |
+|                      |                      | 내용을 읽은 뒤,      |
+|                      |                      | ‘요약하기’ 버튼을    |
+|                      |                      | 클릭하면 OpenAI      |
+|                      |                      | API(GPT 모델)를 통해 |
+|                      |                      | 뉴스의 핵심 내용을   |
+|                      |                      | 자동으로 요약하여    |
+|                      |                      | 제공합니다.          |
++----------------------+----------------------+----------------------+
+|                      | 3                    | 맞춤형 뉴스 추천     |
+|                      |                      | 기능 : 요약한 뉴스의 |
+|                      |                      | 키워드, 내용과       |
+|                      |                      | 유사한 관심 분야에   |
+|                      |                      | 맞는 뉴스 콘텐츠를   |
+|                      |                      | 추천합니다.          |
++----------------------+----------------------+----------------------+
+
++----------------------------------+----------------------------------+
+| [Q 2] Open APIs [points: 40]     |                                  |
+|                                  |                                  |
+| Answer the following questions.  |                                  |
++==================================+==================================+
+| Question                         | Your answer                      |
++----------------------------------+----------------------------------+
+| Which Open API you’ll be using   | OpenAI API, News API             |
+| for this project?                |                                  |
+|                                  |                                  |
+| (= name of the Open API)         |                                  |
++----------------------------------+----------------------------------+
+| What is the URL of the Open API? | News API: https://newsapi.org/   |
+| (please, be specific)            |                                  |
+|                                  | OpenAI API:                      |
+|                                  | https://platform.openai.com/api  |
++----------------------------------+----------------------------------+
+| Which information/data can you   | News API: 사용자가 입력한        |
+| get from using the Open API?     | 키워드를 기반으로 실시간 최신    |
+|                                  | 뉴스 제목, 본문, 출처, 게시일 등 |
+| (e.g., average temperature in    | 뉴스 관련 데이터를 가져옵니다.   |
+| Korea)                           |                                  |
+|                                  | OpenAI API: GPT 모델을 활용하여  |
+|                                  | 뉴스를 자동으로 요약하고,        |
+|                                  | 사용자의 맞춤형 뉴스 추천을 위한 |
+|                                  | 콘텐츠 분석 및 분류를 수행할 수  |
+|                                  | 있는 데이터를 제공합니다.        |
++----------------------------------+----------------------------------+
+
+* 추후에 다른 API를 사용하는 것으로 계획이 변경되어도 괜찮습니다.
+하지만, 최종 결과물 제출 시, 기존 계획과는 다른 API를 사용했다는 것을
+알려주고, 왜 계획이 변경되었는지를 설명해 주세요
+
++-------------------------------------------------------+-------------+
+| [Q 3] Challenges [points: 20]                         |             |
+|                                                       |             |
+| Answer the following questions.                       |             |
++=======================================================+=============+
+| Question                                              | Your answer |
++-------------------------------------------------------+-------------+
+| What is the most challenging problem that your team   |             |
+| is faced now?                                         |             |
+|                                                       |             |
+| -   If you have more than one, please add rows below. |             |
+|                                                       |             |
+| -   If you have none, write “None”.)                  |             |
++-------------------------------------------------------+-------------+
+
+Now, submit the current document on PLATO.
+
+THE END
