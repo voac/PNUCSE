@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Variable</title>
+    </head>
+
+    <body>
+        <h3>Variable</h3>
+        <hr>
+        <script>
+            let x; // declaring global variable x
+
+            function f() {
+                let y; // declaring local variable y within f()
+
+                x = 10; // assigning 10 to global variable x
+                y = 20; // assigning 20 to local variable y
+                z = 30; // declaring GLOBAL variable z, and assign 30
+
+                if (y == 20) {
+                    let b = 40; // declaring block variable b (if - block)
+                    b++;
+                    document.write("block variable b within if block = " + b + "<br>");
+                }
+                // cannot access block variable b here
+                // can access x,y,z
+                document.write("local variable y within function f() = " + y + "<br>");
+            }
+
+            f();
+            document.write("global variable x = " + x + "<br>");
+            document.write("global variable z = " + z);
+        </script>
+    </body>
+</html>
