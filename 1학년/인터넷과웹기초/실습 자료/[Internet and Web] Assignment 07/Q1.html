@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h3>Get two and return the max</h3>
+        <hr>
+        <script>
+            function getnum() {
+                let num1 = parseInt(prompt("Enter the first integer", "0"));
+                let num2 = parseInt(prompt("Enter the second integer", "0"));
+                
+                if ( num1 > num2 ) {
+                    document.write(num1 + " is greater than " + num2);
+                }
+                else if ( num1 < num2 ) {
+                    document.write(num1 + " is smaller than " + num2);
+                }
+                else {
+                    document.write(num1 + " and " + num2 + " are equal");
+                }
+            }
+
+            getnum()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <script>
+            let result = document.getElementById("result");
+
+            function Q3() {
+                let name = prompt("Enter your name", "");
+                let dpm = prompt("Enter your department", "");
+
+                let con1 = (name == null || name.length == 0);
+                let con2 = (dpm == null || dpm.length == 0);
+
+                if (con1 == true && con2 == true) {
+                    let string = "Hello! ";
+                    document.write("<hr>");
+                    document.write(string + "<br>");
+                    document.write("<hr>");
+                }
+                else if (con1 == false & con2 == true) {
+                    let string = "Hello, my name is " + name + ".";
+                    document.write("<hr>");
+                    document.write(string + "<br>");
+                    document.write("<hr>");
+                }
+                else if (con1 == true && con2 == false) {
+                    let string = "Hello, my major is " + dpm + ".";
+                    document.write("<hr>");
+                    document.write(string + "<br>");
+                    document.write("<hr>");
+                }
+                else {
+                    let string = "Hello! my name is " + name + " and my major is " + dpm + ".";
+                    document.write("<hr>");
+                    document.write(string + "<br>");
+                    document.write("<hr>");
+                }
+            }
+
+            Q3()
+        </script>
+    </body>
+</html>

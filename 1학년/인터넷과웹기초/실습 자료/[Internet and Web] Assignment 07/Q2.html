@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            td,th {
+                width : 40px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Getting squared numbers and making a table.</h3>
+        <h3>Calculating n^2 from n=0~N</h3>
+        <hr>
+        <script>
+            function maketable() {
+                let num1 = parseInt(prompt("Enter the positive integer", "1"));
+                
+                document.write("<div>You entered : " + num1 + "</div><br>");
+                document.write('<table border="1">');
+                    document.write('<tr>');
+                        document.write('<th>n</th>');
+                        for(let i = 0; i <= num1; i++) {
+                            document.write('<td>'+i+'</td>');
+                        }
+                    document.write('</tr>');
+                    document.write('<tr>');
+                        document.write('<th>n^2</th>');
+                        for(let i = 0; i <= num1; i++) {
+                            document.write('<td>'+ (i ** 2)+'</td>');
+                        }
+                    document.write('</tr>');
+                document.write('</table>');
+            }
+
+            maketable()
+        </script>
+    </body>
+</html>

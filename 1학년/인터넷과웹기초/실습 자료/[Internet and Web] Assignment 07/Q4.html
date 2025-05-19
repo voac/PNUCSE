@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        </style>
+    </head>
+
+    <body>
+        <h3>Getting even and odd sum</h3>
+        <hr>
+        <script>
+            function Q4() {
+                let num = parseInt(prompt("Enter the positive integer", "1"));
+                let sumall = 0, sumeven = 0, sumodd = 0;
+
+                document.write("Number you entered: " + num + "<br>");
+                for (let n = 0; n <= num; n++) {
+                    sumall += n;
+
+                    var con = (n % 2 == 0);
+
+                    if (con == true) {
+                        sumeven += n;
+                    }
+                    else if (con == false) {
+                        sumodd += n;
+                    }
+                }
+                document.write("Sum of all numbers: " + sumall + "<br>");
+                document.write("Sum of even numbers: " + sumeven + "<br>");
+                document.write("Sum of odd numbers: " + sumodd);
+            }
+
+            Q4()
+        </script>
+    </body>
+</html>
