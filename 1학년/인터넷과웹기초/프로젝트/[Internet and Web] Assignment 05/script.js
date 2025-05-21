@@ -26,7 +26,7 @@ function initMap() {
 // 2. 축제 정보 API 호출
 function fetchFestivalData() {
   const serviceKey = 'cxnMT1Z2HYI3QIgC1idDqO6x4Oy125xU5kPjM1727vaVLuIZMQ8Ey0FFDbPVjc5Y233nqDHUW6rQKPr6IiebqQ==';
-  const url = `https://apis.data.go.kr/6260000/FestivalService/getFestivalKr?ServiceKey=${serviceKey}&pageNo=1&numOfRows=10&resultType=JSON`;
+  const url = `https://apis.data.go.kr/6260000/FestivalService/getFestivalKr?ServiceKey=${serviceKey}&pageNo=1&numOfRows=40&resultType=JSON`;
 
   fetch(url)
     .then(response => response.json())
