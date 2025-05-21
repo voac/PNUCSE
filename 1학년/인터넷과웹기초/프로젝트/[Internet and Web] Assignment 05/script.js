@@ -4,6 +4,7 @@ const intro = document.getElementById("intro");
 const mainPage = document.getElementById("mainPage");
 const welcomeText = document.getElementById("welcomeText");
 var guideModal = document.getElementById('guideModal');
+
 let map;
 let markers = []; // 마커 배열
 
@@ -12,7 +13,7 @@ function initMap() {
   const center = new kakao.maps.LatLng(35.179554, 129.075638);
   map = new kakao.maps.Map(document.getElementById('map'), {
     center: center,
-    level: 8
+    level: 9
   });
 
   $("div button").click(function() { 
@@ -74,13 +75,15 @@ function displayFestivalInfo(festival) {
 
   setTimeout(() => {
     infoDiv.innerHTML = `
-      <h1>${festival.TITLE}</h1><br>
-      <p><strong>기간:</strong> ${festival.USAGE_DAY_WEEK_AND_TIME || '정보 없음'}</p><br>
-      <p><strong>장소:</strong> ${festival.PLACE || '정보 없음'}</p><br>
-      <p><strong>주소:</strong> ${festival.ADDR1 || ''} ${festival.ADDR2 || ''}</p><br>
-      <p><strong>연락처:</strong> ${festival.CNTCT_TEL || '정보 없음'}</p><br>
-      <p><strong>내용:</strong> ${festival.ITEMCNTNTS || '정보 없음'}</p><br>
-      <p><strong>홈페이지:</strong> <a href="${festival.HOMEPAGE_URL}" target="_blank">이동하기</a></p>
+      <br><h1>${festival.TITLE}</h1><br>
+      <div><img src="${festival.MAIN_IMG_NORMAL || '#'}" style="width: 100%; max-width: 700px;"></div><br>
+      <p><strong>기간:</strong> &nbsp; ${festival.USAGE_DAY_WEEK_AND_TIME || '정보 없음'}</p><br>
+      <p><strong>장소:</strong> &nbsp; ${festival.PLACE || '정보 없음'}</p><br>
+      <p><strong>주소:</strong> &nbsp; ${festival.ADDR1 || '정보 없음'}</p><br>
+      <p><strong>가격:</strong> &nbsp; ${festival.USAGE_AMOUNT || '정보 없음'}</p><br>
+      <p><strong>연락처:</strong> &nbsp; ${festival.CNTCT_TEL || '정보 없음'}</p><br>
+      <p><strong>내용:</strong> &nbsp; ${festival.ITEMCNTNTS || '정보 없음'}</p><br>
+      <p><strong>홈페이지:</strong> &nbsp; <a href="${festival.HOMEPAGE_URL}" target="_blank">이동하기</a></p><br>
     `;
 
     // fade-in 트리거
@@ -100,12 +103,6 @@ enterBtn.addEventListener("click", () => {
     welcomeText.textContent = `${name}님, 반가워요! 👋`;
     intro.classList.add("hidden");
     mainPage.classList.remove("hidden");
-  }
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key.toLowerCase() === "s") {
-    window.location.href = "mailto:aiden@example.com";
   }
 });
 
