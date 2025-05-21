@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 🎯 초기 입력 화면 */
+.intro-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.intro-box {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.intro-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rounded-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    transition: 0.2s ease;
+}
+
+.rounded-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.interactive-button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.interactive-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* 🎯 메인 상단 바 */
+.top-bar {
+    width: 100%;
+    max-width: 860px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.busan-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: #ccc 1px solid;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60px;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.site-subtitle {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+/* 🎯 본문 */
+.main-content {
+    max-width: 860px;
+    text-align: center;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.main-content h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.main-content p {
+    line-height: 1.7;
+    color: #444;
+}
+
+.press-tip {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.press-tip code {
+    background: #eee;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+hr {
+    margin-top: 2rem;
+    border: none;
+    border-top: 3px solid #eee;
+    width: 100%;
+    max-width: 860px;
+    margin: auto;
+}
+
+#footercent {
+    text-align: center;
+}
+
+.modal-overlay {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    width: 80%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.modal-content h2 {
+    color: #005bbb;
+}
+
+.modal-content ol {
+    padding-left: 20px;
+}
+.modal-content li {
+    margin-bottom: 8px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
