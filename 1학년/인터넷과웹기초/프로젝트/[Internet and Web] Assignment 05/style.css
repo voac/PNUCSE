@@ -226,3 +226,20 @@ hr {
 .close-btn:hover {
     color: black;
 }
+
+#map {
+    width: 100%;
+    height: 860px;
+}
+
+#festivalInfo {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#festivalInfo.visible {
+    opacity: 1;
+}
