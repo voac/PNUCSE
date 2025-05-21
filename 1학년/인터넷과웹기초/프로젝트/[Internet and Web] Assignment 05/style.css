@@ -63,17 +63,16 @@ body {
 
 .interactive-button {
     padding: 0.7rem 1.5rem;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: white;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .interactive-button:hover {
-    background-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
     transform: scale(1.05);
 }
 
@@ -236,7 +235,13 @@ hr {
 
 #festivalInfo {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin: 2rem auto 0 auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-width: 860px;
+    transform: scale(0.98);
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -244,14 +249,60 @@ hr {
 
 #festivalInfo.visible {
     opacity: 1;
+    transform: scale(1);
 }
 
-#festivalInfo p {
-    line-height: 1.7;
+#festivalInfo h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#festivalInfo img {
+    border-radius: 20px;
+    margin: 0.5rem 0;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.festival-description {
+    text-align: left;
+    margin-top: 0.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
     color: #444;
+    word-break: keep-all;
+    white-space: pre-line;
 }
 
-#festivalInfo p strong {
-    color: #000000;
-    text-decoration: underline;
+.festival-quick-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.festival-quick-info span {
+    flex: 1 1 calc(50% - 0.8rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ccc;
+    padding: 0.8rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.festival-quick-info span strong {
+    color: #000;
+    margin-right: 0.3rem;
+}
+
+.festival-quick-info .centered {
+    flex: 1 1 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
 }
