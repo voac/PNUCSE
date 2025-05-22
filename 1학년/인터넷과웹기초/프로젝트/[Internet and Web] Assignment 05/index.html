@@ -64,14 +64,18 @@
 
             <!-- 지도 섹션 -->
             <div id="mapSection" class="main-content">
-                <div id="map"></div>
+                <div style="display: flex; gap: 2rem;">
+                    <div id="markerList" class="container" style="flex: 1; max-height: 860px; overflow-y: scroll; border: 1px solid #ccc; border-radius: 16px; padding: 10px; background: #fff;"></div>
+                    <div id="map" style="flex: 3;"></div>
+                </div>
                 <br>
                 <div style="text-align: center; margin-bottom: 1.5rem;">
-                    <button id="showFestivals" class="interactive-button">🎉 축제 보기</button>
-                    <button id="showFoods" class="interactive-button">🍽️ 맛집 보기</button>
+                    <button id="showFestivals" class="interactive-button">🎉 축제만 보기</button>
+                    <button id="showFoods" class="interactive-button">🍽️ 맛집만 보기</button>
                 </div>
                 <div id="festivalInfo"></div>
             </div>
+
 
             <!-- 가이드 창 -->
             <div id="guideModal" style="display:none;" class="modal-overlay">

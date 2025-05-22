@@ -18,7 +18,7 @@ function initMap() {
     level: 9
   });
 
-  $("div button").click(function() { 
+  $("div button#enterBtn").click(function() { 
     setTimeout(function() {
       map.relayout();
       map.setCenter(new kakao.maps.LatLng(35.179554, 129.075638));
@@ -51,25 +51,49 @@ function fetchFoodData() {
 }
 
 // 3. 마커 생성 및 클릭 이벤트 설정
+// 축제 마커 표시 + 리스트
 function displayFestivalMarkers(data) {
+  const listDiv = document.getElementById('markerList');
+  listDiv.innerHTML = ""; // 기존 리스트 비우기
+  clearMarkers(markers);
+
   if (data && data.getFestivalKr && data.getFestivalKr.item) {
     const festivals = data.getFestivalKr.item;
 
     festivals.forEach(festival => {
       const lat = parseFloat(festival.LAT);
       const lng = parseFloat(festival.LNG);
-
       if (!isNaN(lat) && !isNaN(lng)) {
         const position = new kakao.maps.LatLng(lat, lng);
         const marker = new kakao.maps.Marker({
           position: position,
-          map: map
+          map: map,
+          title: festival.TITLE, // hover 시 이름 표시
+          image: new kakao.maps.MarkerImage(
+            "./image/marker.png",
+            new kakao.maps.Size(36, 37)
+          )
         });
 
-        // 마커 클릭 시 상세 정보 표시
         kakao.maps.event.addListener(marker, 'click', function () {
           displayFestivalInfo(festival);
+          map.setLevel(3);
+          map.setCenter(marker.getPosition());
         });
+        
+
+        // 리스트 항목 생성
+        const item = document.createElement("div");
+        item.style.padding = "10px";
+        item.style.borderBottom = "1px solid #eee";
+        item.style.cursor = "pointer";
+        item.innerHTML = `<strong>${festival.TITLE}</strong><br><small>${festival.PLACE || ''}</small>`;
+        item.addEventListener("click", () => {
+          map.setCenter(position);
+          map.setLevel(3);
+          kakao.maps.event.trigger(marker, 'click');
+        });
+        listDiv.appendChild(item);
 
         markers.push(marker);
       }
@@ -79,9 +103,13 @@ function displayFestivalMarkers(data) {
   }
 }
 
-// 맛집 마커 표시
+
+// 맛집 마커 표시 + 리스트
 function displayFoodMarkers(data) {
+  const listDiv = document.getElementById('markerList');
+  listDiv.innerHTML = ""; // 기존 리스트 비우기
   clearMarkers(foodMarkers);
+
   if (data && data.getFoodKr && data.getFoodKr.item) {
     data.getFoodKr.item.forEach(food => {
       const lat = parseFloat(food.LAT);
@@ -91,21 +119,38 @@ function displayFoodMarkers(data) {
         const marker = new kakao.maps.Marker({
           position,
           map,
+          title: food.MAIN_TITLE,
           image: new kakao.maps.MarkerImage(
-            "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png", 
-            new kakao.maps.Size(24, 35)
+            "./image/marker_red.png",
+            new kakao.maps.Size(36, 37)
           )
         });
 
         kakao.maps.event.addListener(marker, 'click', function () {
           displayFoodInfo(food);
+          map.setLevel(3);
+          map.setCenter(marker.getPosition());
         });
+
+        // 리스트 항목 생성
+        const item = document.createElement("div");
+        item.style.padding = "10px";
+        item.style.borderBottom = "1px solid #eee";
+        item.style.cursor = "pointer";
+        item.innerHTML = `<strong>${food.MAIN_TITLE}</strong><br><small>${food.ADDR1 || ''}</small>`;
+        item.addEventListener("click", () => {
+          map.setCenter(position);
+          map.setLevel(3);
+          kakao.maps.event.trigger(marker, 'click');
+        });
+        listDiv.appendChild(item);
 
         foodMarkers.push(marker);
       }
     });
   }
 }
+
 
 // 4. 마커 클릭 시 지도 아래에 정보 표시
 function displayFestivalInfo(festival) {
@@ -121,8 +166,8 @@ function displayFestivalInfo(festival) {
 
       <div class="festival-quick-info">
         <span><strong>기간:</strong> ${festival.USAGE_DAY_WEEK_AND_TIME || '정보 없음'}</span>
-        <span><strong>장소:</strong> ${festival.PLACE || '정보 없음'}</span>
         <span><strong>주소:</strong> ${festival.ADDR1 || '정보 없음'}</span>
+        <span><strong>장소:</strong> ${festival.PLACE || '정보 없음'}</span>
         <span><strong>가격:</strong> ${festival.USAGE_AMOUNT || '정보 없음'}</span>
         <span><strong>연락처:</strong> ${festival.CNTCT_TEL || '정보 없음'}</span>
         <span><strong>홈페이지:</strong> <a href="${festival.HOMEPAGE_URL}" target="_blank">이동하기</a></span>
@@ -150,11 +195,10 @@ function displayFoodInfo(food) {
       <div><img src="${food.MAIN_IMG_NORMAL || '#'}" style="width: 100%; max-width: 700px;"></div><br>
 
       <div class="festival-quick-info">
+        <span><strong>메뉴:</strong> ${food.RPRSNTV_MENU || '정보 없음'}</span>
+        <span><strong>영업 시간:</strong> ${food.USAGE_DAY_WEEK_AND_TIME || '정보 없음'}</span>
         <span><strong>주소:</strong> ${food.ADDR1 || '정보 없음'}</span>
         <span><strong>연락처:</strong> ${food.CNTCT_TEL || '정보 없음'}</span>
-        <span><strong>영업 시간:</strong> ${food.USAGE_DAY_WEEK_AND_TIME || '정보 없음'}</span>
-        <span><strong>종류:</strong> ${food.SUBTITLE || '정보 없음'}</span>
-        <span class="centered"><strong>메뉴:</strong> ${food.RPRSNTV_MENU || '정보 없음'}</span>
       </div><br>
 
       <div class="festival-description">
@@ -175,6 +219,7 @@ function clearMarkers(markerList) {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("showFestivals").addEventListener("click", () => {
     clearMarkers(foodMarkers);
+    map.setLevel(9);
     fetchFestivalData();
   });
 
