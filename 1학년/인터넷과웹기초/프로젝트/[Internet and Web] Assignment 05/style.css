@@ -34,7 +34,6 @@ body {
     display: none !important;
 }
 
-/* 🎯 초기 입력 화면 */
 .intro-screen {
     height: 100vh;
     display: flex;
@@ -89,7 +88,6 @@ body {
     transform: scale(1.05);
 }
 
-/* 🎯 메인 상단 바 */
 .top-bar {
     width: 100%;
     max-width: 860px;
@@ -146,7 +144,6 @@ body {
     color: #555;
 }
 
-/* 🎯 본문 */
 .main-content {
     max-width: 860px;
     text-align: center;
@@ -318,4 +315,8 @@ hr {
 #markerList div:hover {
   background-color: #f0f0f0;
   transition: background 0.2s ease;
+}
+
+#searchInput {
+  margin-bottom: 1rem;
 }

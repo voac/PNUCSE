@@ -65,7 +65,10 @@
             <!-- 지도 섹션 -->
             <div id="mapSection" class="main-content">
                 <div style="display: flex; gap: 2rem;">
-                    <div id="markerList" class="container" style="flex: 1; max-height: 860px; overflow-y: scroll; border: 1px solid #ccc; border-radius: 16px; padding: 10px; background: #fff;"></div>
+                    <div style="flex: 1; display: flex; flex-direction: column;">
+                        <input type="text" id="searchInput" class="rounded-input" placeholder="🔍 축제 또는 맛집 이름 검색" style="margin-bottom: 1rem;">
+                        <div id="markerList" class="container" style="flex: 1; max-height: 820px; overflow-y: scroll; border: 1px solid #ccc; border-radius: 16px; padding: 10px; background: #fff;"></div>
+                    </div>
                     <div id="map" style="flex: 3;"></div>
                 </div>
                 <br>
